@@ -20,7 +20,7 @@ export default function Game() {
       router.push("/");
     }
     navigator.sendBeacon(
-      `${apiUrl}/saveMatch`,
+      `api/saveMatch`,
       JSON.stringify(save(player1, player2)),
     );
   }, []);
