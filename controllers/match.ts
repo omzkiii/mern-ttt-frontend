@@ -8,7 +8,7 @@ export type Match = {
   time: string;
 };
 export async function saveData(match: Match) {
-  const response = await fetch(`${apiUrl}/saveMatch`, {
+  const response = await fetch(`/api/saveMatch`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export async function saveData(match: Match) {
   console.log(data);
 }
 export async function getMatches() {
-  const response = await fetch(`${apiUrl}/getMatches`, {
+  const response = await fetch(`/api/getMatches`, {
     method: "GET",
   });
 
